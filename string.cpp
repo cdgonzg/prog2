@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include <boolean.h>
+#include "string.h"
 
-const int MAX = 80;
+//const int MAX = 80;
 typedef char string[MAX];
 
-int strlar (string s)
+int strlar(string s)
 {
     int i = 0;
     while (s[i] != '\0')
@@ -12,7 +11,7 @@ int strlar (string s)
     return i;
 }
 
-void print (string s)
+void print(string s)
 {
     int i = 0;
     while (s[i]!= '\0')
@@ -22,7 +21,7 @@ void print (string s)
     }
 }
 
-void scan (string &s)
+void scan(string &s)
 {
     int i = 0;
     char c;
@@ -37,7 +36,7 @@ void scan (string &s)
     s[i] = '\0';
 }
 
-boolean strmen (string s1, string s2)
+boolean strmen(string s1, string s2)
 {
     int i = 0;
     boolean encontre = FALSE;
@@ -55,7 +54,7 @@ boolean strmen (string s1, string s2)
     return menor;
 }
 
-boolean streq (string s1, string s2)
+boolean streq(string s1, string s2)
 {
     int i = 0;
     boolean iguales = TRUE;
@@ -70,7 +69,8 @@ boolean streq (string s1, string s2)
     return iguales;
 }
 
-void strcop (string &s1,string s2)
+//Copia s2 en s1.
+void strcop(string &s1,string s2)
 {
     int i = 0;
     while (s2[i] != '\0')
@@ -94,10 +94,10 @@ void strcon (string &s1, string s2)
     s1[i] = '\0';
 }
 
-void strswp (string &s1,string &s2)
+void strswp(string &s1, string &s2)
 {
     string aux;
-    strcop (aux,s1);
-    strcop (s1,s2);
-    strcop (s2,aux);
+    // strcop(aux,s1);
+    // strcop(s1,s2);
+    // strcop(s2,aux);
 }

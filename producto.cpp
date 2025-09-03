@@ -1,7 +1,4 @@
-#include <string.h>
-#include <boolean.h>
-#include <fecha.h>
-#include <stdio.h>
+#include "producto.h"
 
 typedef struct producto
 {
@@ -15,7 +12,7 @@ typedef struct producto
 //Carga el producto por teclado.
 void CargaProducto (producto &p){
     printf("Ingrese el nombre del producto: ");
-    scanf(p.nombre);
+    scan(p.nombre);
     printf("Ingrese el numero del producto: ");
     scanf("%ld", &p.numero);
     printf("Ingrese el precio del producto: ");
@@ -23,12 +20,12 @@ void CargaProducto (producto &p){
     printf("El producto esta en stock? (1 para si, 0 para no): ");
     CargaBooleano(p.en_stock);
     printf("Ingrese la fecha de adquisicion (dia mes anio): ");
-    scanf("%d %d %d", &p.fecha_adquisicion.dia, &p.fecha_adquisicion.mes, &p.fecha_adquisicion.anio);
+    CargaFecha(p.fecha_adquisicion);
 }
 
 //Devuelve el nombre del producto.
-string NombreProducto (producto p){
-    return p.nombre;
+void NombreProducto (producto p, string &nombre){
+    strcop(p.nombre, nombre);
 }
 
 //Devuelve el número del producto.

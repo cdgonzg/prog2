@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <boolean.h>
+#include "arreglo.h"
 
-const int TAM = 50;
+//const int TAM = 50;
 typedef int arreglo [TAM];
 
 

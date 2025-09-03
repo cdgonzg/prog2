@@ -1,6 +1,6 @@
-#include <boolean.h>
-#include <string.h>
-#include <fecha.h>
+#include "boolean.h"
+#include "string.h"
+#include "fecha.h"
 
 typedef struct producto
 {
@@ -15,7 +15,7 @@ typedef struct producto
 void CargaProducto (producto &p);
 
 //Devuelve el nombre del producto.
-string NombreProducto (producto p);
+void NombreProducto (producto p, string &nombre);
 
 //Devuelve el número del producto.
 long int NumeroProducto (producto p);

@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <fecha.h>
+#include "fecha.h"
+#include "boolean.h"
 
 typedef struct fecha
 {
@@ -16,6 +16,36 @@ void CargaFecha (fecha &f){
     scanf("%d", &f.mes);
     printf("Ingrese el anio: ");
     scanf("%d", &f.anio);
+}
+
+//devuelve si la fecha es valida o no
+boolean EsFechaValida (fecha f){
+    if(f.anio < 0) return FALSE;
+    if(f.mes < 1 || f.mes > 12) return FALSE;
+    if(f.dia < 1) return FALSE;
+
+    int diasEnMes;
+    switch(f.mes){
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            diasEnMes = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            diasEnMes = 30;
+            break;
+        case 2:
+            if((f.anio % 4 == 0 && f.anio % 100 != 0) || (f.anio % 400 == 0)){
+                diasEnMes = 29; // Año bisiesto
+            } else {
+                diasEnMes = 28;
+            }
+            break;
+        default:
+            return FALSE; // Mes inválido
+    }
+
+    if(f.dia > diasEnMes) return FALSE;
+
+    return TRUE;
 }
 
 //devuelve el dia de la fecha

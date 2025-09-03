@@ -1,8 +1,11 @@
-#include <stdio.h>
-#include <boolean.h>
-#include <string.h>
-#include <arreglo.h>
+#include "boolean.h"
+#include "string.h"
 
-void main () {
-    
+int main () {
+    //defino un string
+    string s1;
+    scan(s1);
+    print(s1);
+
+    return 0;
 }
