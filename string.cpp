@@ -1,5 +1,9 @@
 #include "string.h"
 
+/*
+    verificado que funciona
+*/
+
 int strlar(String s)
 {
     int i = 0;
@@ -94,7 +98,7 @@ void strcon (String &s1, String s2)
 void strswp(String &s1, String &s2)
 {
     String aux;
-    // strcop(aux,s1);
-    // strcop(s1,s2);
-    // strcop(s2,aux);
+    strcop(aux,s1);
+    strcop(s1,s2);
+    strcop(s2,aux);
 }

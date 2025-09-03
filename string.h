@@ -26,9 +26,9 @@ boolean streq(String s1, String s2);
 void strcop(String &s1, String s2);
 
 //Concatena s1 y s2 en s3.
-void strcon(String s1, String s2, String &s3);
+void strcon(String &s1, String s2);
 
 //Intercambia s1 y s2.
-void strswap(String &s1, String &s2);
+void strswp(String &s1, String &s2);
 
 #endif

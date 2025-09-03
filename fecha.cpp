@@ -1,5 +1,8 @@
 #include "fecha.h"
-#include "boolean.h"
+
+/*
+    verificado que funciona
+*/
 
 //carga la fecha por teclado
 void CargaFecha (fecha &f){

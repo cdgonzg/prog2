@@ -1,19 +1,20 @@
 #include "boolean.h"
 #include "string.h"
+#include "fecha.h"
+#include "producto.h"
 #include <stdio.h>
 
 int main () {
-    //defino un string
-    String s1, s2;
-    scan(s1);
-    print(s1);
+    
+    producto p;
+    CargaProducto(p);
+    printf("\nProducto cargado:\n");
+    ImprimeProducto(p);
     printf("\n");
-    scan(s2);
-    print(s2);
-    printf("\n");
-    strcop(s1, s2);
-    print(s1);
-    print(s2);
+
+    String nombre;
+    NombreProducto(p, nombre);
+    printf("\nNombre del producto: %s\n", nombre);
 
     return 0;
 }

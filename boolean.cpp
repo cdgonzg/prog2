@@ -1,5 +1,9 @@
 #include "boolean.h"
 
+/*
+    verificado que funciona
+*/
+
 void cargar (boolean & b)
 {
     int valor;
@@ -11,7 +15,7 @@ void cargar (boolean & b)
     b = TRUE;
 }
 
-void desplegar (boolean b)
+void mostrar(boolean b)
 {
     if (b)
         printf ("verdadero");

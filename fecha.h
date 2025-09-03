@@ -1,6 +1,8 @@
 #ifndef FECHA_H
 #define FECHA_H
 
+#include "boolean.h"
+
 typedef struct
 {
         int dia;
@@ -10,6 +12,9 @@ typedef struct
 
 //carga la fecha por teclado
 void CargaFecha (fecha &f);
+
+//devuelve si la fecha es valida o no
+boolean EsFechaValida (fecha f);
 
 //devuelve el dia de la fecha
 int DiaFecha (fecha f);
