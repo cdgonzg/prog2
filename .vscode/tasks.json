@@ -7,23 +7,15 @@
             "command": "g++",
             "args": [
                 "-g",
-                "${workspaceFolder}/*.c",
+                "${workspaceFolder}/*.cpp",
                 "-o",
-                "${workspaceFolder}/programa.exe"
+                "${workspaceFolder}/programa"
             ],
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
-            "type": "cmake",
-            "label": "CMake: instalar",
-            "command": "install",
-            "problemMatcher": [],
-            "detail": "Tarea instalar plantilla de CMake",
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": "$gcc"
         }
     ]
 }

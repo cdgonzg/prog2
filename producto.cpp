@@ -15,7 +15,7 @@ void CargaProducto (producto &p){
 }
 
 //Devuelve el nombre del producto.
-void NombreProducto(producto p, string &nombre){
+void NombreProducto(producto p, String &nombre){
     //strcop(nombre, p.nombre);
 }
 

@@ -5,20 +5,19 @@
 #include "fecha.h"
 #include "boolean.h"
 
-typedef struct producto
-{
-    string nombre;
+typedef struct {
+    String nombre;
     long int numero;
     float precio;
     boolean en_stock;
     fecha fecha_adquisicion;
-};
+} producto;
 
 //Carga el producto por teclado.
 void CargaProducto (producto &p);
 
 //Devuelve el nombre del producto.
-void NombreProducto (producto p, string &nombre);
+void NombreProducto (producto p, String &nombre);
 
 //Devuelve el número del producto.
 long int NumeroProducto (producto p);
