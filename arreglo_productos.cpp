@@ -1,8 +1,4 @@
-#ifndef _arreglo_productos_H
-#define _arreglo_productos_H
-
-#include "boolean.h"
-#include "producto.h"
+#include "arreglo_productos.h"
 #include <stdio.h>
 
 typedef producto arreglo_productos[50];
@@ -46,4 +42,3 @@ int BuscaProductoPorNumero (arreglo_productos ap, long int numero){
     return -1;
 }
 
-#endif

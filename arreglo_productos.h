@@ -1,5 +1,7 @@
-#include <boolean.h>
-#include <producto.h>
+#ifndef ARREGLO_PRODUCTOS_H
+#define ARREGLO_PRODUCTOS_H
+
+#include "producto.h"
 
 typedef producto arreglo_productos[50];
 
@@ -14,3 +16,5 @@ boolean ExisteProducto (arreglo_productos ap, long int numero);
 
 //Busca un producto por su número y devuelve su posición en el arreglo. Si no lo encuentra, devuelve -1.
 int BuscaProductoPorNumero (arreglo_productos ap, long int numero);
+
+#endif
