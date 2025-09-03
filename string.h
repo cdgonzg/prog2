@@ -23,7 +23,7 @@ boolean strmen(String s1, String s2);
 boolean streq(String s1, String s2); 
 
 //Copia s1 en s2.
-void strcop(String s1, String &s2);
+void strcop(String &s1, String s2);
 
 //Concatena s1 y s2 en s3.
 void strcon(String s1, String s2, String &s3);

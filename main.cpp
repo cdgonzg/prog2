@@ -12,8 +12,8 @@ int main () {
     print(s2);
     printf("\n");
     strcop(s1, s2);
-    // print(s1);
-    // print(s2);
+    print(s1);
+    print(s2);
 
     return 0;
 }
