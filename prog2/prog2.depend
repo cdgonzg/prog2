@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1756866707 source:/home/cdgonzalez/Programacion/prog2/arreglo.cpp
+	"arreglo.h"
+
+1756866707 /home/cdgonzalez/Programacion/prog2/arreglo.h
+	"boolean.h"
+
+1756866707 /home/cdgonzalez/Programacion/prog2/boolean.h
+	<stdio.h>
+
+1756868856 source:/home/cdgonzalez/Programacion/prog2/boolean.cpp
+	"boolean.h"
+
+1756866707 source:/home/cdgonzalez/Programacion/prog2/main.cpp
+	"boolean.h"
+	"string.h"
+
+1756866707 /home/cdgonzalez/Programacion/prog2/string.h
+	"boolean.h"
+
+1756868067 source:/home/cdgonzalez/Programacion/prog2/arreglo_productos.cpp
+	"boolean.h"
+	"producto.h"
+	<stdio.h>
+
+1756868278 /home/cdgonzalez/Programacion/prog2/producto.h
+	"string.h"
+	"fecha.h"
+	"boolean.h"
+
+1756866707 /home/cdgonzalez/Programacion/prog2/fecha.h
+
+1756868586 source:/home/cdgonzalez/Programacion/prog2/string.cpp
+	"string.h"
+
+1756868094 source:/home/cdgonzalez/Programacion/prog2/fecha.cpp
+	"fecha.h"
+	"boolean.h"
+
+1756869023 source:/home/cdgonzalez/Programacion/prog2/producto.cpp
+	"producto.h"
+

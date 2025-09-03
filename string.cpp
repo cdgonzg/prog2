@@ -1,8 +1,5 @@
 #include "string.h"
 
-//const int MAX = 80;
-typedef char string[MAX];
-
 int strlar(string s)
 {
     int i = 0;

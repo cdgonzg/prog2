@@ -1,14 +1,5 @@
 #include "producto.h"
 
-typedef struct producto
-{
-    string nombre;
-    long int numero;
-    float precio;
-    boolean en_stock;
-    fecha fecha_adquisicion;
-};
-
 //Carga el producto por teclado.
 void CargaProducto (producto &p){
     printf("Ingrese el nombre del producto: ");
@@ -18,14 +9,14 @@ void CargaProducto (producto &p){
     printf("Ingrese el precio del producto: ");
     scanf("%f", &p.precio);
     printf("El producto esta en stock? (1 para si, 0 para no): ");
-    CargaBooleano(p.en_stock);
+    cargar(p.en_stock);
     printf("Ingrese la fecha de adquisicion (dia mes anio): ");
     CargaFecha(p.fecha_adquisicion);
 }
 
 //Devuelve el nombre del producto.
-void NombreProducto (producto p, string &nombre){
-    strcop(p.nombre, nombre);
+void NombreProducto(producto p, string &nombre){
+    //strcop(nombre, p.nombre);
 }
 
 //Devuelve el número del producto.
@@ -54,6 +45,6 @@ void ImprimeProducto (producto p){
     printf("Numero: %ld\n", p.numero);
     printf("Precio: %.2f\n", p.precio);
     printf("En stock: ");
-    ImprimeBooleano(p.en_stock);
+    //desplegar(p.en_stock);
     printf("\nFecha de adquisicion: %02d/%02d/%04d\n", p.fecha_adquisicion.dia, p.fecha_adquisicion.mes, p.fecha_adquisicion.anio);
 }

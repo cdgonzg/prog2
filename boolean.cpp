@@ -14,7 +14,7 @@ void cargar (boolean & b)
 void desplegar (boolean b)
 {
     if (b)
-    printf ("verdadero");
+        printf ("verdadero");
     else
-    printf ("falso");
-} 
+        printf ("falso");
+}

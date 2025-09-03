@@ -1,6 +1,9 @@
-#include "boolean.h"
+#ifndef _producto_H
+#define _producto_H
+
 #include "string.h"
 #include "fecha.h"
+#include "boolean.h"
 
 typedef struct producto
 {
@@ -31,3 +34,5 @@ fecha FechaAdquisicionProducto (producto p);
 
 //Imprime el producto por pantalla.
 void ImprimeProducto (producto p);
+
+#endif

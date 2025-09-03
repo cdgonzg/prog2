@@ -1,13 +1,6 @@
 #include "fecha.h"
 #include "boolean.h"
 
-typedef struct fecha
-{
-        int dia;
-        int mes;
-        int anio;
-};
-
 //carga la fecha por teclado
 void CargaFecha (fecha &f){
     printf("Ingrese el dia: ");
