@@ -26,8 +26,8 @@ void scan(String &s)
 {
     int i = 0;
     char c;
-    fflush (stdin);
-    scanf ("%c",&c);
+    fflush(stdin);
+    scanf (" %c",&c);
     while ((c != '\n') && (i < MAX - 1))
     {
         s[i] = c;
