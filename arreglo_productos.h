@@ -3,6 +3,7 @@
 
 #include "producto.h"
 
+//se define para probar con 3 productos, deberia ser 50
 const int MAX_P = 3;
 typedef producto arreglo_productos[MAX_P];
 
