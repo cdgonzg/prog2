@@ -20,7 +20,7 @@ typedef struct {
 } no_metal; 
 
 typedef struct {
-    //int numero_atomico;
+    int numero_atomico;
     String simbolo;
     String nombre;
     int estado_oxidacion;
@@ -37,7 +37,10 @@ typedef struct {
 void cargar(elemento &e);
 
 //mostrar un elemento
-void mostrar(elemento e);
+void imprimirElemento(elemento e);
+
+//obtener numero atomico
+int obtener_numero_atomico(elemento e);
 
 //obtener el tipo de un elemento
 clasificacion obtener_tipo(elemento e);
