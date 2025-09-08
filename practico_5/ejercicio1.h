@@ -17,26 +17,23 @@
     y las arañas en el tercer caso
 */
 //tipo de destinos nacionales posibles
-typedef enum{Colonia, San_Jose, Florida, Canelones, Brasil, Argentina, Paraguay} destino;
+
+typedef enum{Colonia, San_Jose, Florida, Canelones} destino_nacional;
+typedef enum{Brasil, Argentina, Paraguay} destino_internacional;
 
 typedef struct
 {
-    float costo;
-} viaje_nacional;
-
-typedef struct
-{
-    float costo;
+    destino_internacional dest;
     int duracion;
 } viaje_internacional;
 
 typedef struct
 {
-    destino dest;
+    float costo;
     boolean es_internacional;
     union
     {
-        viaje_nacional viaje_nac;
+        destino_nacional viaje_nac;
         viaje_internacional viaje_int;
     } tipo_viaje;
 } viaje;
