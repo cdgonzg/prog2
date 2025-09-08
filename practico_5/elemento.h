@@ -1,5 +1,5 @@
-#ifndef EJERCICIO2_H
-#define EJERCICIO2_H
+#ifndef ELEMENTO_H
+#define ELEMENTO_H
 
 #include "boolean.h"
 #include "string.h"
@@ -14,12 +14,13 @@ typedef struct {
 typedef struct { 
     float conductividad;
 } metal;
+
 typedef struct { 
     estado est;
 } no_metal; 
 
 typedef struct {
-    int numero_atomico;
+    //int numero_atomico;
     String simbolo;
     String nombre;
     int estado_oxidacion;
@@ -32,9 +33,22 @@ typedef struct {
     } tipo;
 } elemento;
 
-typedef struct {
-    elemento tabla[150];
-    int tope;
-} tabla_periodica;
+//cargar un elemento
+void cargar(elemento &e);
+
+//mostrar un elemento
+void mostrar(elemento e);
+
+//obtener el tipo de un elemento
+clasificacion obtener_tipo(elemento e);
+
+//obtener estado de oxidacion
+int obtener_estado_oxidacion(elemento e);
+
+//obtener estado de oxidacion
+int obtener_estado_oxidacion(elemento e);
+
+//obtener estado del no metal
+estado obtener_estado(no_metal nm);
 
 #endif
