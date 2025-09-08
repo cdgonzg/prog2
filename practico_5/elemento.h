@@ -36,6 +36,12 @@ typedef struct {
 //cargar un elemento
 void cargar(elemento &e);
 
+//carga la conductividad de un metal
+void cargar_conductividad(elemento &e);
+
+//carga el estado de un no metal
+void cargar_estado(elemento &e);
+
 //mostrar un elemento
 void imprimirElemento(elemento e);
 

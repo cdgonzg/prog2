@@ -7,7 +7,6 @@ const int MAX = 150;
 
 typedef struct {
     elemento tabla[MAX];
-    int tope;
 } tabla_periodica;
 
 //inicializa la tabla periodica
