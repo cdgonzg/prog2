@@ -3,8 +3,10 @@
 
 #include "elemento.h"
 
+const int MAX = 150;
+
 typedef struct {
-    elemento tabla[150];
+    elemento tabla[MAX];
     int tope;
 } tabla_periodica;
 
