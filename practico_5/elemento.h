@@ -1,12 +1,9 @@
 #ifndef ELEMENTO_H
 #define ELEMENTO_H
 
-#include "boolean.h"
+#include "clasificacion.h"
+#include "estado.h"
 #include "string.h"
-
-
-
-typedef enum {Gas_Noble, Metal, No_Metal} clasificacion;
 
 typedef struct {
     int numero_atomico;
@@ -25,28 +22,34 @@ typedef struct {
 //cargar un elemento
 void cargar(elemento &e);
 
-//carga la conductividad de un metal
-void cargar_conductividad(elemento &e);
-
-//carga el estado de un no metal
-void cargar_estado(elemento &e);
-
 //mostrar un elemento
 void imprimirElemento(elemento e);
 
 //obtener numero atomico
 int obtener_numero_atomico(elemento e);
 
+//obtener simbolo
+void obtener_simbolo(elemento e, String &s);
+
+//obtener nombre
+void obtener_nombre(elemento e, String &s);
+
+//obtener estado de oxidacion
+int obtener_estado_oxidacion(elemento e);
+
+//obtener si existe
+boolean existe(elemento e);
+
 //obtener el tipo de un elemento
-clasificacion obtener_tipo(elemento e);
+clasificacion obtener_clasificacion(elemento e);
 
-//obtener estado de oxidacion
-int obtener_estado_oxidacion(elemento e);
+//obtener radiactividad si es un gas noble
+int obtener_radiactividad(elemento e);
 
-//obtener estado de oxidacion
-int obtener_estado_oxidacion(elemento e);
+//obtener conductividad si es un metal
+float obtener_conductividad_metal(elemento e);
 
 //obtener estado del no metal
-//estado obtener_estado(no_metal nm);
+estado obtener_estado(elemento e);
 
 #endif
