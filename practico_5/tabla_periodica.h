@@ -3,7 +3,7 @@
 
 #include "elemento.h"
 
-const int MAX = 149;
+const int MAX = 150;
 
 typedef elemento tabla_periodica[MAX];
 
