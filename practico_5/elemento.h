@@ -4,7 +4,7 @@
 #include "boolean.h"
 #include "string.h"
 
-typedef enum {Solido, Liquido, Gaseoso} estado;
+
 
 typedef enum {Gas_Noble, Metal, No_Metal} clasificacion;
 
