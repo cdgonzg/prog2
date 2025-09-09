@@ -3,9 +3,9 @@
 
 #include "elemento.h"
 
-const int MAX = 150;
+const int MAX_ELEM = 150;
 
-typedef elemento tabla_periodica[MAX];
+typedef elemento tabla_periodica[MAX_ELEM];
 
 //inicializa la tabla periodica
 void inicializar_tabla(tabla_periodica &tp);

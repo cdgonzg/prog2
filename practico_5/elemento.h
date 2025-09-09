@@ -20,7 +20,7 @@ typedef struct {
 } elemento;
 
 //cargar un elemento
-void cargar(elemento &e);
+void crear_elemento(elemento &e);
 
 //mostrar un elemento
 void imprimirElemento(elemento e);

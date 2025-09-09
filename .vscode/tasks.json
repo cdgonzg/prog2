@@ -7,7 +7,7 @@
             "command": "g++",
             "args": [
                 "-g",
-                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}/practico_5/*.cpp",
                 "-o",
                 "${workspaceFolder}/programa"
             ],

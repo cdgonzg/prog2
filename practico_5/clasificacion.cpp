@@ -3,7 +3,7 @@
 //cargar clasificacion
 void cargar_clasificacion(clasificacion &c){
     String opcion;
-    print("Ingrese la clasificacion del elemento (Gas Noble, Metal, No Metal): ");
+    printf("Ingrese la clasificacion del elemento (Gas Noble, Metal, No Metal): ");
     scan(opcion);
     if (streq(opcion, "Gas Noble") == 0){
         c = GAS_NOBLE;

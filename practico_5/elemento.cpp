@@ -1,23 +1,23 @@
 #include "elemento.h"
 
 //cargar un elemento
-void cargar(elemento &e){
-    print("Ingrese el numero atomico: ");
-    scanf("%d", e.numero_atomico);
-    print("Ingrese el simbolo: ");
+void crear_elemento(elemento &e){
+    printf("Ingrese el numero atomico: ");
+    scanf("%d", &e.numero_atomico);
+    printf("Ingrese el simbolo: ");
     scan(e.simbolo);
-    print("Ingrese el nombre: ");
+    printf("Ingrese el nombre: ");
     scan(e.nombre);
-    print("Ingrese el estado de oxidacion: ");
-    scanf("%d", e.estado_oxidacion);
-    print("Ingrese si existe (TRUE/FALSE): ");
+    printf("Ingrese el estado de oxidacion: ");
+    scanf("%d", &e.estado_oxidacion);
+    printf("Ingrese si existe (TRUE/FALSE): ");
     cargar(e.existe);
     cargar_clasificacion(e.clas);
     if (e.clas == GAS_NOBLE){
-        print("Ingrese si es radiactivo (TRUE/FALSE): ");
+        printf("Ingrese si es radiactivo (TRUE/FALSE): ");
         cargar(e.tipo.es_radiactivo);
     } else if (e.clas == METAL){
-        print("Ingrese la conductividad: ");
+        printf("Ingrese la conductividad: ");
         scanf("%f", e.tipo.conductividad);
     } else if (e.clas == NO_METAL){
         cargar_estado(e.tipo.est);
@@ -28,26 +28,30 @@ void cargar(elemento &e){
 
 //mostrar un elemento
 void imprimirElemento(elemento e){
-    print("Numero atomico: ");
-    printf("%d", e.numero_atomico);
-    print("Simbolo: ");
+    printf("Numero atomico: %d", e.numero_atomico);
+    printf("\n");
+    printf("Simbolo: ");
     print(e.simbolo);
-    print("Nombre: ");
-    print(e.nombre);
-    print("Estado de oxidacion: ");
-    printf("%d", e.estado_oxidacion);
-    print("Existe: ");
+    printf("\n");
+    printf("Nombre: ");
+    printf(e.nombre);
+    printf("\n");
+    printf("Estado de oxidacion: %d", e.estado_oxidacion);
+    printf("\n");
+    printf("Existe: ");
     mostrar(e.existe);
-    print("Clasificacion: ");
+    printf("\n");
+    printf("Clasificacion: ");
     imprimir_clasificacion(e.clas);
+    printf("\n");
     if (e.clas == GAS_NOBLE){
-        print("Es radiactivo: ");
+        printf("Es radiactivo: ");
         mostrar(e.tipo.es_radiactivo);
     } else if (e.clas == METAL){
-        print("Conductividad: ");
-        printf("%f", e.tipo.conductividad);
+        printf("Conductividad: ");
+        printf("%f \n", e.tipo.conductividad);
     } else if (e.clas == NO_METAL){
-        print("Estado: ");
+        printf("Estado: ");
         imprimir_estado(e.tipo.est);
     }
 }

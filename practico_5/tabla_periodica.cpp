@@ -2,7 +2,7 @@
 
 //inicializa la tabla periodica
 void inicializar_tabla(tabla_periodica &tp){
-    for (int i = 0; i < MAX; i++){
+    for (int i = 0; i < MAX_ELEM; i++){
         tp[i].existe = FALSE;
     }
 }
@@ -14,7 +14,7 @@ void agregar_elemento(tabla_periodica &tp, elemento e){
 
 //imprimir tabla periodica en pantalla
 void imprimir_tabla(tabla_periodica tp){
-    for (int i = 0; i < MAX; i++){
+    for (int i = 0; i < MAX_ELEM; i++){
         //lo imprime solo si existe?
         if (tp[i].existe == TRUE){
             imprimirElemento(tp[i]);
@@ -37,7 +37,7 @@ void imprimir_elemento(tabla_periodica tp, int numero_atomico){
 /* Dado un estado de oxidación, desplegar por pantalla los números atómicos de los elementos
 que tengan dicho estado de oxidación. */
 void elementos_por_estado_oxidacion(tabla_periodica tp, int estado_oxidacion){
-    for (int i = 0; i < MAX; i++)
+    for (int i = 0; i < MAX_ELEM; i++)
     {
         if (tp[i].existe == TRUE && obtener_estado_oxidacion(tp[i]) == estado_oxidacion)
         {
