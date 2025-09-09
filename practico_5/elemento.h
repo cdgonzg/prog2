@@ -8,18 +8,6 @@ typedef enum {Solido, Liquido, Gaseoso} estado;
 
 typedef enum {Gas_Noble, Metal, No_Metal} clasificacion;
 
-// typedef struct { 
-//     boolean es_radiactivo;
-// } gas_noble;
-
-// typedef struct { 
-//     float conductividad;
-// } metal;
-
-// typedef struct { 
-//     estado est;
-// } no_metal; 
-
 typedef struct {
     int numero_atomico;
     String simbolo;

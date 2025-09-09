@@ -56,3 +56,8 @@ boolean existe_elemento(tabla_periodica tp, int numero_atomico){
 clasificacion tipo_elemento(tabla_periodica tp, int numero_atomico){
     return obtener_tipo(tp.tabla[numero_atomico - 1]);
 }
+
+//Dado un número atómico, obtener el elemento correspondiente.
+elemento obtener_elemento(tabla_periodica tp, int numero_atomico){
+    return tp.tabla[numero_atomico - 1];
+}

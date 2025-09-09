@@ -10,12 +10,7 @@
 //ejercicio 1.a
 
 /***************************************************************************************/
-/*
-    En todos los casos podemos hacer un arreglo con tope para almacenar
-    los viajes en el primer caso
-    las reuniones o eventos en el segundo caso
-    y las arañas en el tercer caso
-*/
+
 //tipo de destinos nacionales posibles
 
 typedef enum{Colonia, San_Jose, Florida, Canelones} destino_nacional;
@@ -79,27 +74,23 @@ typedef struct
 typedef enum {Tarantula, Viuda_Negra, Peluda} tipo;
 
 typedef struct {
-    boolean come_ratones;
-} tarantula;
-
-typedef struct {
     float nivel_veneno;
     float peso;
-} viudas;
+} viuda;
 
 typedef struct {
     boolean urticante;
     fecha fecha_hibernacion;
-} peludas;
+} peluda;
 
 typedef struct{
     String nombre;
     int cant_patas;
     tipo arania;
     union {
-        tarantula tara;
-        viudas viuda;
-        peludas peluda;
+        boolean come_ratones;
+        viuda viuda;
+        peluda peluda;
     } tipo_arania;
 } arania;
 /***************************************************************************************/

@@ -5,9 +5,7 @@
 
 const int MAX = 149;
 
-typedef struct {
-    elemento tabla[MAX];
-} tabla_periodica;
+typedef elemento tabla_periodica[MAX];
 
 //inicializa la tabla periodica
 void inicializar_tabla(tabla_periodica &tp);
@@ -30,5 +28,8 @@ boolean existe_elemento(tabla_periodica tp, int numero_atomico);
 
 //Dado el número atómico de un elemento saber si dicho elemento es un metal, no metal o gas noble.
 clasificacion tipo_elemento(tabla_periodica tp, int numero_atomico);
+
+//Dado un número atómico, obtener el elemento correspondiente.
+elemento obtener_elemento(tabla_periodica tp, int numero_atomico);
 
 #endif
