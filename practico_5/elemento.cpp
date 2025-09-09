@@ -10,15 +10,15 @@ void crear_elemento(elemento &e){
     scan(e.nombre);
     printf("Ingrese el estado de oxidacion: ");
     scanf("%d", &e.estado_oxidacion);
-    printf("Ingrese si existe (TRUE/FALSE): ");
+    printf("Existe: ");
     cargar(e.existe);
     cargar_clasificacion(e.clas);
     if (e.clas == GAS_NOBLE){
-        printf("Ingrese si es radiactivo (TRUE/FALSE): ");
+        printf("Es radiactivo: ");
         cargar(e.tipo.es_radiactivo);
     } else if (e.clas == METAL){
         printf("Ingrese la conductividad: ");
-        scanf("%f", e.tipo.conductividad);
+        scanf("%f", &e.tipo.conductividad);
     } else if (e.clas == NO_METAL){
         cargar_estado(e.tipo.est);
     }
@@ -54,6 +54,7 @@ void imprimirElemento(elemento e){
         printf("Estado: ");
         imprimir_estado(e.tipo.est);
     }
+    printf("\n");
 }
 
 //obtener numero atomico

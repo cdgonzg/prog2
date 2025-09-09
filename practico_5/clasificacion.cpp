@@ -5,11 +5,11 @@ void cargar_clasificacion(clasificacion &c){
     String opcion;
     printf("Ingrese la clasificacion del elemento (Gas Noble, Metal, No Metal): ");
     scan(opcion);
-    if (streq(opcion, "Gas Noble") == 0){
+    if (streq(opcion, "Gas Noble")){
         c = GAS_NOBLE;
-    } else if (streq(opcion, "Metal") == 0){
+    } else if (streq(opcion, "Metal")){
                 c = METAL;
-            } else if (streq(opcion, "No Metal") == 0){
+            } else if (streq(opcion, "No Metal")){
                 c = NO_METAL;
     }
 }

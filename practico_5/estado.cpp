@@ -5,11 +5,11 @@ void cargar_estado(estado &e){
     String opcion;
     print("Ingrese el estado del no metal (SOLIDO, LIQUIDO, GASEOSO): ");
     scan(opcion);
-    if (streq(opcion, "SOLIDO") == 0){
+    if (streq(opcion, "SOLIDO")){
         e = SOLIDO;
-    } else if (streq(opcion, "LIQUIDO") == 0){
+    } else if (streq(opcion, "LIQUIDO")){
                 e = LIQUIDO;
-            } else if (streq(opcion, "GASEOSO") == 0){
+            } else if (streq(opcion, "GASEOSO")){
                 e = GASEOSO;
     }
 }
