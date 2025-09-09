@@ -3,7 +3,7 @@
 
 #include "elemento.h"
 
-const int MAX = 150;
+const int MAX = 149;
 
 typedef struct {
     elemento tabla[MAX];
