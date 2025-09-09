@@ -45,11 +45,16 @@ typedef struct
 /***************************************************************************************/
 typedef enum {Economia, Politica, Informatica, Tecnologia} temas_reunion;
 
+typedef struct 
+{
+    int hora;
+    int minutos;
+} hora;
+
 typedef struct
 {
     String persona;
-    int hora;
-    temas_reunion tema;
+    hora h;
 } reunion;
 
 typedef struct
@@ -57,19 +62,22 @@ typedef struct
     String pais;
     temas_reunion tema;
 } evento;
+
 typedef struct
 {
     fecha dia;
     boolean es_reunion; //TRUE si es reunion, FALSE si es evento
     union {
-        reunion reun;
         evento even;
+        reunion reun;
     } tipo_encuentro;
 } agenda;
 /***************************************************************************************/
 
 //ejercicio 1.c
 /***************************************************************************************/
+typedef enum {Tarantula, Viuda_Negra, Peluda} tipo;
+
 typedef struct {
     boolean come_ratones;
 } tarantula;
@@ -87,6 +95,7 @@ typedef struct {
 typedef struct{
     String nombre;
     int cant_patas;
+    tipo arania;
     union {
         tarantula tara;
         viudas viuda;
