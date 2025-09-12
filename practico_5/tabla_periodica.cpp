@@ -22,7 +22,7 @@ void imprimir_tabla(tabla_periodica tp){
     }
 }
 
-//imprimir elemento segun numero atomico solo si existe?
+//imprimir elemento segun numero atomico
 void imprimir_elemento(tabla_periodica tp, int numero_atomico){
     if (tp[numero_atomico - 1].existe == TRUE)
     {
