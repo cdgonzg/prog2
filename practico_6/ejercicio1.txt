@@ -1,0 +1,30 @@
+Ejercicio 1:
+
+const int N = 10;
+
+typedef struct { int entero;
+ float real;
+ } Pareja;
+
+typedef struct { Pareja arre[N];
+ int tope;
+ } ArrayConTope;
+
+ArrayConTope A;
+Pareja P;
+
+Parte (a):
+
+Asignación ¿Compila? Justificación
+- A.tope = 10; Compila, porque el tope es un entero y coincide con MAX.
+- P.real = 1.1; Compila, porque el P es de tipo Pareja y usa la componente real.
+- P.tope = 7; No compila, porque P es de tipo Pareja, no tiene tope.
+- Pareja.entero = 23; No compila, porque Pareja es el tipo, no la variable de tipo.
+- ArrayConTope.arre[0].real = 4.3; No compila, porque ArrayConTope es el tipo, no la variable.
+- P.entero = 2; Compila, porque P es de tipo Pareja y usa la componente entero.
+- A.arre.entero = 5; No compila, porque no indico el índice del array con tope de A.
+- A[0].entero = 3; No compila, la instrucción es incorrecta, usa el A de tipo ArrayConTope, pero no indica el índice de arre.
+- A.arre[0].entero = 3; Compila, indica el A de tipo ArrayConTope, luego hace uso de la componente arre e indica el índice que es 0, ahí asigna la componente entero.
+- A.arre[0] = P; Compila, a la posición 0 del arreglo, asignando el el elemento P de tipo Pareja.
+- P.real = A.arre[0].entero; Compila, estoy asignando el entero al real de P.
+- A.arre[0].real = P.entero; Compila, estoy asignando el entero al real de P.
