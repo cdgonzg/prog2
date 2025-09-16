@@ -1,0 +1,112 @@
+//PRECONDICION El arreglo no esta lleno
+void Insertar(ArregloConTope &act, int val)
+{
+ act.arre[act.tope]=val;
+ act.tope++;
+}
+
+void Listar (Arreglo arre)
+{
+for (int i=0; i<MAX; i++)
+	printf("%d", arre[i]);
+}
+
+void ListarConTope (ArregloConTope act)
+{
+for (int i=0; i<act.tope; i++)
+	printf("%d", act.arre[i]);
+}
+
+
+boolean PerteneceArregloComun (Arreglo arre, int valor)
+{ boolean encontre=FALSE;
+  int i=0;
+	while (!encontre && i<MAX)
+	{
+		if (arre[i]==valor)
+			encontre=TRUE;
+		else i++;
+	}
+	return encontre;
+}
+
+boolean PerteneceArregloConTope (ArregloConTope act, int valor)
+{
+boolean encontre=FALSE;
+  int i=0;
+	while (!encontre && i<act.tope)
+	{
+		if (act.arre[i]==valor)
+			encontre=TRUE;
+		else i++;
+	}
+	return encontre;
+}
+
+
+//Modulo string
+
+void print (string s)
+
+//Modulo disco
+typedef struct{int ISBN;
+			   string titulo;
+			   int anio;
+			  }disco;
+			  
+//Modulo disco
+void MostrarDico (dico d) 
+{
+printf("%d", d.ISBN);
+print (d.titulo);
+printf("%d", d.anio);
+}
+
+selectoras
+
+int DarISBN (disco d)
+{return d.ISBN};}
+
+void DarTitulo (disco d, string &s)
+{
+	strcop(s, d.titulo);
+}
+
+int Daranio (disco d)
+{return d.anio;}
+
+
+
+
+
+
+			  
+//Modulo arreglocontopedediscos
+typedef struct {disco arreglo [MAX];
+				 int tope; 
+			   } ArregloConTope;
+
+
+
+
+//Modulo arreglocontopedediscos
+void ListarConTope (ArregloConTope act)
+{
+for (int i=0; i<act.tope; i++)
+	MostrarDico(act.arreglo[i]);
+}
+
+ARREGLAR
+//Modulo arreglocontopedediscos
+boolean PerteneceArregloConTope (ArregloConTope act, dico d)
+{
+boolean encontre=FALSE;
+  int i=0;
+	while (!encontre && i<act.tope)
+	{
+		if (DarISBN(act.arreglo[i])==DarISBN(d))
+			encontre=TRUE;
+		else i++;
+	}
+	return encontre;
+}
