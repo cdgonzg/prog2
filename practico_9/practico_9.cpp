@@ -26,8 +26,89 @@ int main () {
     Está correctamente definida porque para todo n en N, Func4(n) tiene un valor definido.
     Func4(4) = 4 + Func4(3) = 4 + 3 + Func4(1) = 4 + 3 + 1 = 8
     */
+    int func1 (int n) {
+        if (n == 0) {
+            return 3;
+        } else {
+            return n + func1(n - 1);
+        }
+    }
+
+    int func4 (int n) {
+        if (n == 0) {
+            return 2;
+        } else if (n == 1) {
+            return 1;
+        } else if (n % 2 == 0) {
+            return n + func4(n - 1);
+        } else {
+            return n + func4(n - 2);
+        }
+    }
+
+    // Ejercicio 2
+    // parte a
+    int Par(int n) {
+        if (n == 0) {
+            return 1; // TRUE
+        } else if (n == 1) {
+            return 0; // FALSE
+        } else {
+            return Par(n - 2);
+        }
+    }
+
+    // parte b
+    int Suma(int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return n + Suma(n - 1);
+        }
+    }
+
+    // parte c
+    void ImprimirAsteriscos(int n) {
+        if (n = 1) {
+            printf("*");
+        } else
+            ImprimirAsteriscos(n - 1);
+    }
+
+    // parte d
+    void ImprimirDecrecientes (int n){
+        if (n == 1) {
+            printf("1\n");
+        } else {
+            printf("%d\n", n);
+            ImprimirDecrecientes(n - 1);
+        }
+    }
+
+    // parte e
+    void ImprimirCrecientes (int n){
+        if (n == 1) {
+            printf("1\n");
+        } else {
+            ImprimirCrecientes(n - 1);
+            printf("%d\n", n);
+        }
+    }
+
+    // parte f
+    int Potencia (int base, int exp) {
+        if (exp == 0) {
+            return 1;
+        } else {
+            return base * Potencia(base, exp - 1);
+        }
+    }
+
+    // Ejercicio 3
 
     
+
+
     
     return 0;
 }
