@@ -93,41 +93,43 @@ int Suma(int n) {
 }
 
 // parte c
-// void ImprimirAsteriscos(int n) {
-//     if (n = 1)
-//         printf("*");
-//      else
-//         ImprimirAsteriscos(n - 1);
-// }
+void ImprimirAsteriscos(int n) {
+    if (n == 1) {
+        printf("*");
+    } else{
+            printf("*");
+            ImprimirAsteriscos(n - 1);
+        }
+}
 
 // parte d
-// void ImprimirDecrecientes (int n){
-//     if (n == 1) {
-//         printf("1\n");
-//     } else {
-//         printf("%d\n", n);
-//         ImprimirDecrecientes(n - 1);
-//     }
-// }
+void ImprimirDecrecientes (int n){
+    if (n == 1) {
+        printf("1\n");
+    } else {
+        printf("%d\n", n);
+        ImprimirDecrecientes(n - 1);
+    }
+}
 
 // parte e
-// void ImprimirCrecientes (int n){
-//     if (n == 1) {
-//         printf("1\n");
-//     } else {
-//         ImprimirCrecientes(n - 1);
-//         printf("%d\n", n);
-//     }
-// }
+void ImprimirCrecientes (int n){
+    if (n == 1) {
+        printf("1\n");
+    } else {
+        ImprimirCrecientes(n - 1);
+        printf("%d\n", n);
+    }
+}
 
 // parte f
-// int Potencia (int base, int exp) {
-//     if (exp == 0) {
-//         return 1;
-//     } else {
-//         return base * Potencia(base, exp - 1);
-//     }
-// }
+int Potencia (int base, int exp) {
+    if (exp == 0) {
+        return 1;
+    } else {
+        return base * Potencia(base, exp - 1);
+    }
+}
 
 // Ejercicio 3
 
@@ -139,5 +141,15 @@ int main () {
     printf("El resultado de Suma(6) es: %d\n", resultado_suma); 
     resultado_suma = Suma(5);
     printf("El resultado de Suma(7) es: %d\n", resultado_suma);
+    printf("ImprimirAsteriscos(5): ");
+    ImprimirAsteriscos(5);
+    printf("\n");
+    printf("ImprimirDecrecientes(5):\n");
+    ImprimirDecrecientes(5);
+    printf("ImprimirCrecientes(5):\n");
+    ImprimirCrecientes(5);
+    int resultado_potencia = Potencia(2, 3);
+    printf("El resultado de Potencia(2, 3) es: %d\n", resultado_potencia);
+
    return 0; 
 }
