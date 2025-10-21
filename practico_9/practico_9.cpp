@@ -63,7 +63,7 @@ int main () {
         if (n == 0) {
             return 0;
         } else {
-            return n + Suma(n - 1);
+            return n + Suma(n - 2);
         }
     }
 
