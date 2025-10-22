@@ -133,14 +133,12 @@ int Potencia (int base, int exp) {
 
 // Ejercicio 3
 
-int mcd(int p, int q) {
-    if (q == 0)
-        return p;
-    
-    int cociente = p / q;
-    int resto = p - cociente * q;
-
-    return mcd(q, resto);
+int mcd (int p, int q) {
+    if ( p % q == 0 ) {
+        return q;
+    } else {
+        return mcd(q, p % q);
+    }
 }
 
 int main () {
