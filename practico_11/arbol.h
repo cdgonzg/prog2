@@ -42,6 +42,30 @@ void recorrer_preorden(arbol_binario arbol);
 void recorrer_orden(arbol_binario arbol);
 void recorrer_postorden(arbol_binario arbol);
 
+//devuelve la suma de los nodos del árbol
+int suma_nodos(arbol_binario arbol);
+
+//listar impares de menor a mayor del arbol
+void listar_impares(arbol_binario arbol);
+
+//obtener el máximo del árbol
+int obtener_maximo(arbol_binario arbol);
+
+//contar múltiplos de un número en el árbol
+int contar_multiplos(arbol_binario arbol, int numero);
+
+//sumar pares e impares en el árbol
+void sumar_pares_impares(arbol_binario arbol, int & suma_pares, int & suma_impares);
+
+//dado un valor determinar si es hoja del árbol
+boolean es_hoja(arbol_binario arbol, int valor);
+
+//listar nodos del nivel n
+void listar_nivel(arbol_binario arbol, int n);
+
+//calcula la profundidad de un nodo dado
+int calcular_profundidad(arbol_binario arbol, int valor);
+
 //destruir el árbol y liberar memoria
 void destruir_arbol(arbol_binario & arbol);
 
