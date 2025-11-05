@@ -119,11 +119,13 @@ int obtener_maximo(arbol_binario arbol){
 //contar múltiplos de un número en el árbol
 // precondición: numero != 0 y el árbol no es vacío
 int contar_multiplos(arbol_binario arbol, int numero){
-    int contador = 0;
-    if (arbol->dato % numero == 0) {
-        contador = 1;
+    if (arbol == NULL) {
+        return 0;
     }
-      return contador + contar_multiplos(arbol->izq, numero) + contar_multiplos(arbol->der, numero);
+
+    int contador = (arbol->dato % numero == 0) ? 1 : 0;
+
+    return contador + contar_multiplos(arbol->izq, numero) + contar_multiplos(arbol->der, numero);
 }
 
 //sumar pares e impares en el árbol
@@ -159,9 +161,15 @@ boolean es_hoja(arbol_binario arbol, int valor){
 //listar nodos del nivel n
 // precondición: n >= 0 y el árbol no es vacío
 void listar_nivel(arbol_binario arbol, int n){
-    if (n == 0 && arbol != NULL) {
-        printf("Nivel %d: ", arbol->dato);
+    if (arbol == NULL || n < 0) {
+        return;
     }
+
+    if (n == 0) {
+        printf("%d ", arbol->dato);
+        return;
+    }
+
     listar_nivel(arbol->izq, n - 1);
     listar_nivel(arbol->der, n - 1);
 }
